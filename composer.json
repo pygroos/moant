@@ -1,5 +1,19 @@
 {
+	"name": "moext/slim-framework",
+    "type": "project",
+    "description": "Micro framework powered by slim",
+    "keywords": ["framework","micro","slim","moext"],
+    "homepage": "http://moext.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "moext",
+            "email": "dev@moext.org",
+            "homepage": "http://moext.org"
+        }
+    ],
     "require": {
+    	"php": ">=5.5.0",
         "slim/slim": "^3.8",
         "nette/mail": "^2.4",
         "catfan/Medoo": "^1.4",
