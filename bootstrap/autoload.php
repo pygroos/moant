@@ -14,7 +14,7 @@ $env->load();
 $app = new \Slim\App(
     [
         'settings' => [
-            'displayErrorDetails' => env('app_debug')
+            'displayErrorDetails' => env('app_debug', true)
         ]
     ]
 );
