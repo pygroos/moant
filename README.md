@@ -27,5 +27,8 @@
 5. cp .env.example .env
 ```
 
+## 使用
 
+**路由**
+所有路由都定义在`route`目录下的`api.php`文件里
 
