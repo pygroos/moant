@@ -42,7 +42,7 @@ $app->any('/', TestController::class . ':test');
 
 **配置**
 
-在`.env`文件中配置连接mysql和redis。新建`test`数据库，在库中新建`users`表，插入几条测试数据数据。
+在`.env`文件中配置连接mysql和redis。新建`test`数据库，在库中新建`users`表，插入几条测试数据。
 
 ```
 # 新建数据库
@@ -96,10 +96,10 @@ class TestController
 }
 ```
 
-进入`slim-framework\public`目录，执行`php -S localhost:8080`，在浏览器访问`localhost:8080`，页面会显示`Micro Framework`。同时，将DB查询出的数据保存到了redis里并把这次请求的输入输出记录到日志文件里。
+进入`slim-framework\public`目录，执行`php -S localhost:8080`，在浏览器访问`localhost:8080`，页面会显示`Micro Framework`。同时，将DB查询出的数据保存到redis并把这次请求的输入输出在日志文件记录。
 
 ## 通用方法
 
-`support`目录下的`helper.php`文件为通用函数，在这个文件里定义常用函数能够全局使用。
+`support`目录下的`helper.php`文件里定义一些全局函数。
 
 
