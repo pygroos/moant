@@ -41,16 +41,16 @@ if (! function_exists('env')) {
 if (! function_exists('startsWith')) {
     function startsWith($haystack, $needles)
     {
-        $bRet = false;
+        $ret = false;
 
         foreach ((array) $needles as $needle)
         {
             if ($needle != '' && mb_strpos($haystack, $needle) === 0) {
-                $bRet = true;
+                $ret = true;
             }
         }
 
-        return $bRet;
+        return $ret;
     }
 }
 
@@ -60,14 +60,40 @@ if (! function_exists('startsWith')) {
 if (! function_exists('endsWith')) {
     function endsWith($haystack, $needles)
     {
-        $bRet = false;
+        $ret = false;
 
         foreach ((array) $needles as $needle) {
             if ((string) $needle === mb_substr($haystack, -mb_strlen($needle), NULL, 'UTF-8')) {
-                $bRet = true;
+                $ret = true;
             }
         }
 
-        return $bRet;
+        return $ret;
+    }
+}
+
+/**
+ * Determine the IP address is internal
+ */
+if (! function_exists('isInnerIp')) {
+    function isInnerIp($str)
+    {
+        if (0 == strlen($str) || filter_var($str, FILTER_VALIDATE_IP)) {
+            return false;
+        }
+
+        $ret = false;
+
+        $innerIp = filter_var(
+            $str,
+            FILTER_VALIDATE_IP,
+            FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE
+        );
+
+        if (false === $innerIp) {
+            $ret = true;
+        }
+
+        return $ret;
     }
 }
