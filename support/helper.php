@@ -96,4 +96,21 @@ if (! function_exists('isInnerIp')) {
 
         return $ret;
     }
+
+    function randomString($length = 6, $numeric = false)
+    {
+        $ret = '';
+        
+        $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if (true == $numeric) {
+            $chars = '0123456789';
+        }
+
+        $charLen = strlen( $chars );
+        for ( $i = 0; $i < $length; $i ++ )
+        {
+            $ret .= $chars[ rand( 0, $charLen - 1 ) ];
+        }
+        return $ret;
+    }
 }
