@@ -60,8 +60,8 @@ CREATE TABLE `users` (
 # 插入数据
 INSERT INTO `users` (`id`, `username`, `password`)
 VALUES
-	(1, '张三', '123'),
-	(2, '李四', '456');
+    (1, '张三', '123'),
+    (2, '李四', '456');
 ```
 
 **示例**
@@ -79,20 +79,20 @@ use App\Services\Logger;
 
 class TestController
 {
-	public function test(Request $request, Response $response)
-	{
-		$db = DB::getInstance();
-		$arrUser = $db->select('users', ['username']);
+    public function test(Request $request, Response $response)
+    {
+        $db = DB::getInstance();
+        $arrUser = $db->select('users', ['username']);
 
-		$redis = Redis::getInstance();
-		$redis->setex('redis_key', 3600, json_encode($arrUser));
+        $redis = Redis::getInstance();
+        $redis->setex('redis_key', 3600, json_encode($arrUser));
 
-		Logger::add('name', [$request->getUri(), $request->getMethod(), $response->withJson('logger record success!')]);
+        Logger::add('name', [$request->getUri(), $request->getMethod(), $response->withJson('logger record success!')]);
 
-		echo '<h1 style="text-align: center; margin-top: 200px">';
+        echo '<h1 style="text-align: center; margin-top: 200px">';
         echo 'Micro Framework';
         echo '</h1>';
-	}
+    }
 }
 ```
 
@@ -100,6 +100,18 @@ class TestController
 
 ## 通用方法
 
-`support`目录下的`helper.php`文件里定义一些全局函数。
+`support`目录下的`helper.php`文件里定义一些通用函数。
 
+## ab压测对比（仅供参考）
+
+最近把小框架完善了下，并用它和Lumen做了次压测对比。压测数据不具说服力，仅供参考。使用同样的方式，通过路由找到控制器然后在方法里输出一串字符。
+
+电脑配置
+![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/uNEJAkBolY.png)
+
+Lumen压测图如下：
+![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/XlnqZOe8po.png)
+
+Slim-Framework压测图如下：
+![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/I4GamHEQ1E.png)
 
