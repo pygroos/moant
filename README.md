@@ -108,14 +108,14 @@ class TestController
 
 电脑配置
 
-<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/uNEJAkBolY.png"/></div>
+![](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/uNEJAkBolY.png)
 
 Lumen压测图如下：
 
-<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/XlnqZOe8po.png"/></div>
+![](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/XlnqZOe8po.png)
 
 Slim-Framework压测图如下：
 
-<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/I4GamHEQ1E.png"/></div>
+![](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/I4GamHEQ1E.png)
 
 
