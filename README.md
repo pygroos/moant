@@ -107,11 +107,15 @@ class TestController
 最近把小框架完善了下，并用它和Lumen做了次压测对比。压测数据不具说服力，仅供参考。使用同样的方式，通过路由找到控制器然后在方法里输出一串字符。
 
 电脑配置
-![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/uNEJAkBolY.png)
+
+<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/uNEJAkBolY.png"/></div>
 
 Lumen压测图如下：
-![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/XlnqZOe8po.png)
+
+<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/XlnqZOe8po.png"/></div>
 
 Slim-Framework压测图如下：
-![file](https://dn-phphub.qbox.me/uploads/images/201710/23/14915/I4GamHEQ1E.png)
+
+<div align=center><img src="https://dn-phphub.qbox.me/uploads/images/201710/23/14915/I4GamHEQ1E.png"/></div>
+
 
