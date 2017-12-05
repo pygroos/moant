@@ -3,13 +3,13 @@
     "type": "project",
     "description": "Micro framework powered by slim",
     "keywords": ["framework","micro","slim","moext"],
-    "homepage": "http://moext.org",
+    "homepage": "http://moext.io",
     "license": "MIT",
     "authors": [
         {
             "name": "moext",
-            "email": "dev@moext.org",
-            "homepage": "http://moext.org"
+            "email": "niucunhui@gmail.com",
+            "homepage": "http://moext.io"
         }
     ],
     "require": {
@@ -29,7 +29,7 @@
     "autoload": {
         "files": ["support/helper.php"],
         "psr-4": {
-            "App\\": "app"
+            "App\\": "app/"
         }
     }
 }
