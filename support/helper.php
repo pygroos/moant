@@ -97,10 +97,14 @@ if (! function_exists('isInnerIp')) {
         return $ret;
     }
 
+/**
+ * Generate random string
+ */
+if (! function_exists('randomString')) {
     function randomString($length = 6, $numeric = false)
     {
         $ret = '';
-        
+
         $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         if (true == $numeric) {
             $chars = '0123456789';
@@ -113,4 +117,6 @@ if (! function_exists('isInnerIp')) {
         }
         return $ret;
     }
+}
+
 }

@@ -9,7 +9,7 @@ class Logger
 {
     public static function add($name, $data, $level = Log::INFO)
     {
-        $path = ROOT_PATH . '/log/';
+        $path = ROOT_PATH . '/storage/';
 
         $log = new Log($name);
         $log->pushHandler(new StreamHandler($path . $name .'.'. date('Y-m-d') . '.log', $level));
