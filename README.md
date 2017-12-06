@@ -18,3 +18,16 @@
 ```
 5. composer dump-autoload -o
 ```
+
+## 压测
+同样在控制器中输出`Hello World`，以下是电脑配置及与Lumen5.5框架的对比结果。
+
+##### 电脑配置
+![](http://moext.io/images/mac.png)
+
+##### Lumen压测结果
+![](http://moext.io/images/lumen.png)
+
+##### 微框架压测结果
+![](http://moext.io/images/slim.png)
+
