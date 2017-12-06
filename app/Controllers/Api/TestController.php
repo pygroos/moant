@@ -3,24 +3,28 @@
 namespace App\Controllers;
 
 use App\Services\DB;
-use Slim\Http\Request;
 use App\Services\Redis;
 use App\Services\Logger;
+use Slim\Http\Request;
 
 class TestController extends Controller
 {
 	public function test(Request $request)
 	{
-		$db = DB::getInstance();
-		$arrUser = $db->select('users', ['username']);
+	    // DB Service Example
 
-		$redis = Redis::getInstance();
-		$redis->setex('redis_key', 3600, json_encode($arrUser));
+		// $db = DB::getInstance();
+		// $arrUser = $db->select('users', ['username']);
+
+        // Redis Service Example
+
+		// $redis = Redis::getInstance();
+		// $redis->setex('redis_key', 3600, json_encode($arrUser));
+
+        // Logger Service Example
+
+		// Logger::add('name', [$request->getUri(), $request->getMethod()]);
 		
-		Logger::add('name', [$request->getUri(), $request->getMethod()]);
-		
-		echo '<h1 style="text-align: center; margin-top: 200px">';
-        echo 'Micro Framework';
-        echo '</h1>';
+		return $this->outPut(200, 'success', ['project' => 'slim-framework']);
 	} 
 }
