@@ -16,9 +16,9 @@ class Redis
         if (null === self::$instance)
         {
             self::$instance = new Client([
-                'scheme' => env('redis_scheme', 'tcp:'),
-                'host'   => env('redis_host', '127.0.0.1'),
-                'port'   => env('redis_port', 6379),
+                'scheme' => env('REDIS_SCHEME', 'tcp:'),
+                'host'   => env('REDIS_HOST', '127.0.0.1'),
+                'port'   => env('REDIS_PORT', 6379),
             ]);
         }
 

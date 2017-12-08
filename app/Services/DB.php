@@ -17,14 +17,14 @@ class DB
         {
             self::$instance = new Medoo(
                 [
-                    'database_type' => env('db_type', 'mysql'),
-                    'database_name' => env('db_name'),
-                    'server'        => env('db_server'),
-                    'username'      => env('db_username'),
-                    'password'      => env('db_password'),
-                    'charset'       => env('db_charset', 'utf8'),
-                    'port'          => env('db_port', 3306),
-                    'prefix'        => env('db_prefix', ''),
+                    'database_type' => env('DB_TYPE', 'mysql'),
+                    'database_name' => env('DB_NAME'),
+                    'server'        => env('DB_HOST'),
+                    'username'      => env('DB_USERNAME'),
+                    'password'      => env('DB_PASSWORD'),
+                    'charset'       => env('DB_CHARSET', 'utf8'),
+                    'port'          => env('DB_PORT', 3306),
+                    'prefix'        => env('DB_PREFIX', ''),
                 ]
             );
         }

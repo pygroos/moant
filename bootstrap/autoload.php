@@ -14,13 +14,13 @@ array_map(function($key) {
 }, $newKeys);
 
 //  Set timezone
-@ date_default_timezone_set(env('timezone', 'UTC'));
+@ date_default_timezone_set(env('TIMEZONE', 'UTC'));
 
 //  Create app
 $app = new \Slim\App(
     [
         'settings' => [
-            'displayErrorDetails' => env('app_debug', true)
+            'displayErrorDetails' => env('APP_DEBUG', true)
         ]
     ]
 );
