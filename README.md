@@ -31,3 +31,5 @@
 ##### 微框架压测结果
 ![](http://moext.io/images/slim.png)
 
+## 视频教程
+http://study.163.com/course/introduction/1004712047.htm
