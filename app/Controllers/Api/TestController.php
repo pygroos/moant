@@ -9,7 +9,7 @@ use Slim\Http\Request;
 
 class TestController extends Controller
 {
-	public function test(Request $request)
+    public function test(Request $request)
 	{
 	    // DB Service Example
 

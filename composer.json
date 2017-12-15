@@ -24,7 +24,8 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4"
+        "phpunit/phpunit": "^6.4",
+		"zircote/swagger-php": "^2.0"
     },
     "autoload": {
         "files": ["support/helper.php"],
