@@ -1,5 +1,5 @@
 <?php
 
-use App\Controllers\TestController;
+use App\Controllers\DemoController;
 
-$app->any('/', TestController::class . ':test');
+$app->any('/', DemoController::class . ':test');
