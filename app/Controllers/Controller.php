@@ -19,7 +19,15 @@ class Controller
         $this->c = $ci;
         $this->request = $this->c->get('request');
         $this->response = $this->c->get('response');
-        $this->version = $this->getVersionForHeader();
+
+        if ($this->getVersionForHeader())
+        {
+            $this->version = $this->getVersionForHeader();
+        }
+        else
+        {
+            $this->version = $this->request->getParam('v') ? $this->request->getParam('v') : '1.0';
+        }
     }
 
     public function outPut($code, $message = '', $data = [], $version = '1.0')

@@ -2,15 +2,8 @@
 
 namespace App\Traits;
 
-use Slim\Http\Request;
-
 trait VersionTrait
 {
-    public function getVersionForUrl(Request $request)
-    {
-        return $request->getParam('v', '1.0');
-    }
-
     public function getVersionForHeader()
     {
         $ret = '';

@@ -22,8 +22,19 @@ class DemoController extends Controller
 
          // Logger Service Example
 
-		 Logger::add('name', [$this->request->getUri(), $this->request->getMethod()]);
+		 Logger::add(
+		     'name',
+             [
+                 $this->request->getUri(),
+                $this->request->getMethod()
+             ]
+         );
 		
-		return $this->outPut(200, 'success', ['project' => 'Moant Framework']);
+		return $this->outPut(
+		    200,
+            'success',
+            ['project' => 'Moant Framework'],
+            $this->version
+        );
 	} 
 }
