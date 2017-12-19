@@ -2,13 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\RegisterModel_V1_0;
+use App\Models\RegisterModel_V1_1;
+
 /**
  * @SWG\Info(
  *   version="1.0.0",
  *   title="Example of using references in swagger-php",
  * )
  */
-class RestController extends Controller
+class RegisterController extends Controller
 {
     /**
      * @SWG\Post(
@@ -44,8 +47,25 @@ class RestController extends Controller
      *     security={{"Bearer":{}}}
      * )
      */
-    public function get()
+    public function action()
     {
 
     }
+
+    private function getInstanceByVersion()
+    {
+        $ret = null;
+
+        if (0 == strcmp('1.1', $this->version))
+        {
+            $ret = RegisterModel_V1_1::getInstance();
+        }
+        else
+        {
+            $ret = RegisterModel_V1_0::getInstance();
+        }
+
+        return $ret;
+    }
+
 }

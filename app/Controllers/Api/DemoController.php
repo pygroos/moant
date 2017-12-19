@@ -25,6 +25,6 @@ class DemoController extends Controller
 
 		 Logger::add('name', [$request->getUri(), $request->getMethod()]);
 		
-		return $this->outPut(200, 'success', ['project' => 'slim-framework']);
+		return $this->outPut(200, 'success', ['project' => 'Moant Framework']);
 	} 
 }
