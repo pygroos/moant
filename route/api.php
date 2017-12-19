@@ -1,11 +1,7 @@
 <?php
 
-use App\Controllers\DemoController;
-use App\Controllers\RegisterController;
-
-$app->any('/', DemoController::class . ':test');
-
-$app->post('/users', RegisterController::class . ':action');
+$app->any('/', '\App\Controllers\DemoController:test');
+$app->post('/users', '\App\Controllers\RegisterController:action');
 
 
 

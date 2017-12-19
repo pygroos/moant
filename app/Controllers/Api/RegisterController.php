@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\RegisterModel_V1_0;
-use App\Models\RegisterModel_V1_1;
+use App\Models\Register_V1_0;
+use App\Models\Register_V1_1;
 
 /**
  * @SWG\Info(
@@ -58,11 +58,11 @@ class RegisterController extends Controller
 
         if (0 == strcmp('1.1', $this->version))
         {
-            $ret = RegisterModel_V1_1::getInstance();
+            $ret = Register_V1_1::getInstance();
         }
         else
         {
-            $ret = RegisterModel_V1_0::getInstance();
+            $ret = Register_V1_0::getInstance();
         }
 
         return $ret;
