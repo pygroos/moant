@@ -5,11 +5,10 @@ namespace App\Controllers;
 use App\Services\DB;
 use App\Services\Redis;
 use App\Services\Logger;
-use Slim\Http\Request;
 
 class DemoController extends Controller
 {
-    public function test(Request $request)
+    public function test()
 	{
 	     // DB Service Example
 
@@ -23,7 +22,7 @@ class DemoController extends Controller
 
          // Logger Service Example
 
-		 Logger::add('name', [$request->getUri(), $request->getMethod()]);
+		 Logger::add('name', [$this->request->getUri(), $this->request->getMethod()]);
 		
 		return $this->outPut(200, 'success', ['project' => 'Moant Framework']);
 	} 
