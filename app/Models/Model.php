@@ -2,14 +2,22 @@
 
 namespace App\Models;
 
+use App\Services\DB;
+use App\Services\Redis;
+
 class Model
 {
+    protected $db;
+    protected $redis;
     protected $modelVersion;
     protected static $arrInstance = [];
 
     public function __construct()
     {
         $this->modelVersion = '1.0';
+
+        $this->db = DB::getInstance();
+        $this->redis = Redis::getInstance();
     }
 
     final public static function getInstance()

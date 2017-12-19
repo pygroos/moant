@@ -5,9 +5,10 @@ namespace App\Controllers;
 use App\Models\Register_V1_0;
 use App\Models\Register_V1_1;
 
+// ./vendor/bin/swagger app/Controllers/Api/ -o document/v1.0
 /**
  * @SWG\Info(
- *   version="1.0.0",
+ *   version="1.0",
  *   title="Example of using references in swagger-php",
  * )
  */
@@ -15,41 +16,44 @@ class RegisterController extends Controller
 {
     /**
      * @SWG\Post(
-     *     path="/api/path",
-     *     summary="Post to URL",
+     *     path="/users",
+     *     summary="用户注册",
      *     @SWG\Parameter(
-     *          name="body",
+     *          name="email, username, password",
      *          in="body",
      *          required=true,
      *          @SWG\Schema(
      *              @SWG\Property(
-     *                  property="name",
+     *                  property="email",
      *                  type="string",
      *                  maximum=64
      *              ),
      *              @SWG\Property(
-     *                  property="description",
-     *                  type="string"
+     *                  property="username",
+     *                  type="string",
+     *                  maximum=12
+     *              ),
+     *              @SWG\Property(
+     *                  property="password",
+     *                  type="string",
+     *                  maximum=64
      *              )
      *          )
      *     ),
      *     @SWG\Response(
      *          response=200,
-     *          description="Example extended response",
-     *          ref="$/responses/Json",
-     *          @SWG\Schema(
-     *              @SWG\Property(
-     *                  property="data",
-     *                  ref="#/definitions/Product"
-     *              )
-     *          )
+     *          description="注册成功",
      *     ),
      *     security={{"Bearer":{}}}
      * )
      */
     public function action()
     {
+        $email = $this->request->getParam('email', '');
+        $username = $this->request->getParam('username', '');
+        $password = $this->request->getParam('password', '');
 
+        $this->getInstanceByVersion()->store($email, $username, $password);
     }
 
     private function getInstanceByVersion()

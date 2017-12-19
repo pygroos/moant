@@ -2,25 +2,30 @@
     "swagger": "2.0",
     "info": {
         "title": "Example of using references in swagger-php",
-        "version": "1.0.0"
+        "version": "1.0"
     },
     "paths": {
-        "/api/path": {
+        "/users": {
             "post": {
-                "summary": "Post to URL",
+                "summary": "\u7528\u6237\u6ce8\u518c",
                 "parameters": [
                     {
-                        "name": "body",
+                        "name": "email, username, password",
                         "in": "body",
                         "required": true,
                         "schema": {
                             "properties": {
-                                "name": {
+                                "email": {
                                     "type": "string",
                                     "maximum": 64
                                 },
-                                "description": {
-                                    "type": "string"
+                                "username": {
+                                    "type": "string",
+                                    "maximum": 12
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "maximum": 64
                                 }
                             }
                         }
@@ -28,15 +33,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Example extended response",
-                        "schema": {
-                            "properties": {
-                                "data": {
-                                    "$ref": "#/definitions/Product"
-                                }
-                            }
-                        },
-                        "$ref": "$/responses/Json"
+                        "description": "\u6ce8\u518c\u6210\u529f"
                     }
                 },
                 "security": [
