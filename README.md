@@ -16,6 +16,13 @@
     <img src="./structure.jpg">
 </div>
 
+## 组件
+* [Medoo](https://medoo.in/) 轻量级数据库ORM框架
+* [predis](https://github.com/nrk/predis/wiki) Redis操作 [文档](http://www.cnblogs.com/ikodota/archive/2012/03/05/php_redis_cn.html)
+* [monolog](https://seldaek.github.io/monolog/) 日志
+* [phpdotenv](https://github.com/vlucas/phpdotenv/blob/master/README.md) 配置文件
+* [guzzle](http://docs.guzzlephp.org/en/stable/overview.html) HTTP请求
+
 ## 性能
 
 
