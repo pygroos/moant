@@ -1,5 +1,4 @@
-# Moant Framework
-
+<p align="center"><img src="./moto.svg"></p>
 <p align="center">
     <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/v/stable.svg"></a>
     <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/downloads.svg"></a>
