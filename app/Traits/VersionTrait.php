@@ -7,7 +7,7 @@ trait VersionTrait
     public function getVersionForHeader()
     {
         $ret = '';
-        
+
         if (is_array($_SERVER) &&
             isset($_SERVER['HTTP_ACCEPT']) &&
             strcmp($_SERVER['HTTP_ACCEPT'], HTTP_HEADER_VERSION_ACCEPT) == 0)
