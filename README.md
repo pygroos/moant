@@ -1,5 +1,10 @@
 # Moant Framework
-[![Latest Stable Version](https://poser.pugx.org/moext/moant/v/stable)](https://packagist.org/packages/moext/moant)[![Total Downloads](https://poser.pugx.org/moext/moant/downloads)](https://packagist.org/packages/moext/moant)[![License](https://poser.pugx.org/moext/moant/license)](https://packagist.org/packages/moext/moant)
+
+<p align="center">
+    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/v/stable.svg"></a>
+    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/downloads.svg"></a>
+    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/license.svg"></a>
+</p>
 
 ## 背景
 
