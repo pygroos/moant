@@ -78,7 +78,7 @@ if (! function_exists('endsWith')) {
 if (! function_exists('isInnerIp')) {
     function isInnerIp($str)
     {
-        if (0 == strlen($str) || filter_var($str, FILTER_VALIDATE_IP)) {
+        if (0 == strlen($str) || ! filter_var($str, FILTER_VALIDATE_IP)) {
             return false;
         }
 
