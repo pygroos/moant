@@ -24,7 +24,42 @@
 * [guzzle](http://docs.guzzlephp.org/en/stable/overview.html) HTTP请求
 
 ## 性能
+关于性能方面，每种框架如果只是单一地在控制器输出`Hello World`，性能总不会相差太多。所以，在性能比较的时候，从数据库取一条数据并返回，这样的方式或许更接近真实的业务场景。这里选取`Lumen`框架进行对比，修改`CACHE_DRIVER`项为`redis`，以减少其它方面影响性能的因素。
+#### Lumen
+```
+use DB;
+class ExampleController extends Controller
+{
+    public function test()
+    {
+        $user = DB::table('users')->first();
+        return $user->username;
+    }
+}
+```
+#### Moant
+```
+use App\Services\DB;
+class DemoController extends Controller
+{
+   public function test()
+	{
+		 $db = DB::getInstance();
+		 $user = $db->get('users', '*');
+		 return $user['username'];
+	}
+}
+```
 
+#### 对比
+
+<div align="center">
+    <img src="./lumen.png">
+</div>
+
+<div align="center">
+    <img src="./moant.png">
+</div>
 
 ## 安装
 ```
