@@ -1,4 +1,4 @@
-<p align="center"><img src="./moto.svg" width=350 height=350></p>
+<p align="center"><img src="http://p20dw3aw7.bkt.clouddn.com/moto.svg" width=350 height=350></p>
 <p align="center">
     <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/v/stable.svg"></a>
     <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/downloads.svg"></a>
@@ -13,7 +13,7 @@
 既然是用来开发API，当然是不需要视图层(V)的。框架只有控制器(C)和模型(M)，为了更好地实现API版本管理，控制器的作用仅是接收参数判断请求版本之后调用指定版本的模型而不掺杂任何业务逻辑，待模型处理完数据，最后由控制器返回并携带版本号。
 
 <div align="center">
-    <img src="./structure.jpg">
+    <img src="http://p20dw3aw7.bkt.clouddn.com/structure.jpg">
 </div>
 
 ## 性能
@@ -47,11 +47,11 @@ class DemoController extends Controller
 #### 对比
 
 <div align="center">
-    <img src="./lumen.png">
+    <img src="http://p20dw3aw7.bkt.clouddn.com/lumen.png">
 </div>
 
 <div align="center">
-    <img src="./moant.png">
+    <img src="http://p20dw3aw7.bkt.clouddn.com/moant.png">
 </div>
 
 ## 安装
