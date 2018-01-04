@@ -31,9 +31,7 @@
     "minimum-stability": "stable",
     "scripts": {
         "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
-        ],
-        "post-package-install": [
+            "php -r \"copy('.env.example', '.env');\"",
             "composer dump-autoload -o"
         ]
     }
