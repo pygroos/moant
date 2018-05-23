@@ -33,7 +33,7 @@
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
         ],
-        "post-package-install": [
+        "post-create-project-cmd": [
             "composer dump-autoload -o"
         ]
     }
