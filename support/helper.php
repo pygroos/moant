@@ -8,7 +8,7 @@ if (! function_exists('env')) {
     {
         $value = getenv($key);
 
-        if (false === $value) {
+        if (false === $value || 0 == strlen($value)) {
             return $default;
         }
 
