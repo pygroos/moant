@@ -50,6 +50,7 @@ class DemoController extends Controller
     <img src="http://p20dw3aw7.bkt.clouddn.com/lumen.png">
 </div>
 
+
 <div align="center">
     <img src="http://p20dw3aw7.bkt.clouddn.com/moant.png">
 </div>
