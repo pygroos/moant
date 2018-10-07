@@ -1,8 +1,8 @@
 <p align="center"><img src="http://p20dw3aw7.bkt.clouddn.com/moto.svg" width=350 height=350></p>
 <p align="center">
-    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/v/stable.svg"></a>
-    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/downloads.svg"></a>
-    <a href="https://packagist.org/packages/moext/moant"><img src="https://poser.pugx.org/moext/moant/license.svg"></a>
+    <a href="https://packagist.org/packages/moaik/moant"><img src="https://poser.pugx.org/moaik/moant/v/stable.svg"></a>
+    <a href="https://packagist.org/packages/moaik/moant"><img src="https://poser.pugx.org/moaik/moant/downloads.svg"></a>
+    <a href="https://packagist.org/packages/moaik/moant"><img src="https://poser.pugx.org/moaik/moant/license.svg"></a>
 </p>
 
 ## 关于
@@ -58,7 +58,7 @@ class DemoController extends Controller
 ## 安装
 
 ```
-composer create-project moext/moant your-app '1.0.*' --prefer-dist -vvv
+composer create-project moaik/moant your-app '1.0.*' --prefer-dist -vvv
 ```
 
 ## 组件
