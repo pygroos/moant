@@ -1,13 +1,13 @@
 {
-	"name": "moaik/moant",
+	"name": "pygroos/moant",
     "description": "Micro framework powered by slim",
     "keywords": ["framework","slim","moant"],
     "license": "MIT",
     "type": "project",
     "authors": [
         {
-            "name": "Cunhui Niu",
-            "email": "niucunhui@gmail.com"
+            "name": "pygroos",
+            "email": "pygroos@gmail.com"
         }
     ],
     "require": {
