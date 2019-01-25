@@ -52,7 +52,7 @@ use App\Services\Logger;
 class DemoApi extends BaseApi
 {
     public function test()
-	{
+    {
 	    // Get Param Example
 	    $param = $this->request->getParam('param', 0);
 	
@@ -79,8 +79,13 @@ class DemoApi extends BaseApi
             ['project' => 'Moant Framework'],
             $this->version
         );
-	} 
+     } 
 }
+```
+
+* **Command**
+```
+php task.php [Class] [Method] [(optional) param ...]
 ```
 
 ## In use package
