@@ -1,8 +1,10 @@
-<img src="http://pygroos-github.oss-cn-beijing.aliyuncs.com/ant.svg?Expires=1548405479&OSSAccessKeyId=TMP.AQHnxwaaLsLaMFIyGbQmYhD1cLVqW8B2mcorZ1lG4wDW8XaAsuanOZLd3R06ADAtAhUAi63X7R8Xj6qu19srvJBFqWJzhp4CFFGjex1opdXWgvDv9CquJX4VZzuE&Signature=dmggYjxmF0wDXPV0R3PXN4Zt7PA%3D" />
+<p align="center"><img src="http://pygroos-github.oss-cn-beijing.aliyuncs.com/ant.svg?Expires=1548405479&OSSAccessKeyId=TMP.AQHnxwaaLsLaMFIyGbQmYhD1cLVqW8B2mcorZ1lG4wDW8XaAsuanOZLd3R06ADAtAhUAi63X7R8Xj6qu19srvJBFqWJzhp4CFFGjex1opdXWgvDv9CquJX4VZzuE&Signature=dmggYjxmF0wDXPV0R3PXN4Zt7PA%3D"></p>
 
-[![Latest Stable Version](https://poser.pugx.org/pygroos/moant/v/stable)](https://packagist.org/packages/pygroos/moant)
-[![Total Downloads](https://poser.pugx.org/pygroos/moant/downloads)](https://packagist.org/packages/pygroos/moant)
-[![License](https://poser.pugx.org/pygroos/moant/license)](https://packagist.org/packages/pygroos/moant)
+<p align="center">
+<a href="https://packagist.org/packages/pygroos/moant"><img src="https://poser.pugx.org/pygroos/moant/v/stable"></a>
+<a href="https://packagist.org/packages/pygroos/moant"><img src="https://poser.pugx.org/pygroos/moant/downloads"></a>
+<a href="https://packagist.org/packages/pygroos/moant"><img src="https://poser.pugx.org/pygroos/moant/license" alt="License"></a>
+</p>
 
 ## Introduction
 **Moant is a php micro framework powered by slim.Used for easy and quick development api.**  
