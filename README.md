@@ -1,3 +1,9 @@
+<img src="http://pygroos-github.oss-cn-beijing.aliyuncs.com/ant.svg?Expires=1548405479&OSSAccessKeyId=TMP.AQHnxwaaLsLaMFIyGbQmYhD1cLVqW8B2mcorZ1lG4wDW8XaAsuanOZLd3R06ADAtAhUAi63X7R8Xj6qu19srvJBFqWJzhp4CFFGjex1opdXWgvDv9CquJX4VZzuE&Signature=dmggYjxmF0wDXPV0R3PXN4Zt7PA%3D" />
+
+[![Latest Stable Version](https://poser.pugx.org/pygroos/moant/v/stable)](https://packagist.org/packages/pygroos/moant)
+[![Total Downloads](https://poser.pugx.org/pygroos/moant/downloads)](https://packagist.org/packages/pygroos/moant)
+[![License](https://poser.pugx.org/pygroos/moant/license)](https://packagist.org/packages/pygroos/moant)
+
 ## Introduction
 **Moant is a php micro framework powered by slim.Used for easy and quick development api.**  
 **Moant have the following characteristics:**
@@ -53,33 +59,33 @@ class DemoApi extends BaseApi
 {
     public function test()
     {
-	    // Get Param Example
-	    $param = $this->request->getParam('param', 0);
+        // Get Param Example
+        $param = $this->request->getParam('param', 0);
 	
-	    // DB Service Example
-		$db = DB::getInstance();
-		$arrUser = $db->select('users', ['username']);
+        // DB Service Example
+        $db = DB::getInstance();
+        $arrUser = $db->select('users', ['username']);
 
         // Redis Service Example
-		$redis = Redis::getInstance();
-		$redis->setex('redis_key', 3600, json_encode($arrUser));
+        $redis = Redis::getInstance();
+        $redis->setex('redis_key', 3600, json_encode($arrUser));
 
         // Logger Service Example
-		Logger::add(
-		    'name',
+        Logger::add(
+            'name',
             [
                 $this->request->getUri(),
                 $this->request->getMethod()
             ]
         );
 		
-		return $this->outPut(
-		    200,
+        return $this->outPut(
+            200,
             'success',
             ['project' => 'Moant Framework'],
             $this->version
         );
-     } 
+    } 
 }
 ```
 
