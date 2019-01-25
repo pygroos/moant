@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Api;
 
 use App\Traits\VersionTrait;
 use Interop\Container\ContainerInterface;
 
-class Controller
+class BaseApi
 {
     use VersionTrait;
 

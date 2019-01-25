@@ -1,7 +1,7 @@
 <?php
 
-$app->any('/', '\App\Controllers\DemoController:test');
-$app->post('/users', '\App\Controllers\RegisterController:action');
+$app->any('/', '\App\Api\DemoApi:test');
+$app->post('/users', '\App\Api\RegisterApi:action');
 
 
 

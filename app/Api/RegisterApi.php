@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Api;
 
 use App\Models\Register_V1_0;
 use App\Models\Register_V1_1;
 
-class RegisterController extends Controller
+class RegisterApi extends BaseApi
 {
     public function action()
     {

@@ -4,7 +4,7 @@
 array_shift($argv);
 if (is_array($argv) && count($argv) > 1) {
     // include class file
-    require_once(dirname(__FILE__) . '/Command/' . ucwords($argv[0]) . 'Command.php');
+    require_once(dirname(__FILE__) . '/app/Command/' . ucwords($argv[0]) . 'Command.php');
     $class = ucwords($argv[0]) . 'Command';
 
     $object = new $class;

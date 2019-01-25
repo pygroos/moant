@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Api;
 
 use App\Services\DB;
 use App\Services\Redis;
 use App\Services\Logger;
 
-class DemoController extends Controller
+class DemoApi extends BaseApi
 {
     public function test()
 	{
