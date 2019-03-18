@@ -1,5 +1,6 @@
 <?php
 
+// 目前使用命名空间只支持调用静态方法
 use App\Services\Mail;
 
 require_once dirname(__FILE__) . '/../../public/index.php';
