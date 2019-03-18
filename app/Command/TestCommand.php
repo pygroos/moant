@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\Logger;
+use App\Services\Mail;
 
 require_once dirname(__FILE__) . '/../../public/index.php';
 
@@ -12,7 +12,7 @@ class TestCommand
     public function run()
     {
         echo "Hello World" . PHP_EOL;
-        Logger::add('command', ['a', 'b']);
+        Mail::send('postmaster@moaik.com', 'xxx', 'xxx');
     }
 
     //
