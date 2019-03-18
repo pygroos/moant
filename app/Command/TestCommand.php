@@ -1,5 +1,9 @@
 <?php
 
+use App\Services\Logger;
+
+require_once dirname(__FILE__) . '/../../public/index.php';
+
 class TestCommand
 {
     //
@@ -8,6 +12,7 @@ class TestCommand
     public function run()
     {
         echo "Hello World" . PHP_EOL;
+        Logger::add('command', ['a', 'b']);
     }
 
     //

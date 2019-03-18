@@ -1,7 +1,7 @@
 <?php
 
 //  Register the auto loader
-require '../vendor/autoload.php';
+require dirname(__FILE__) . '/../vendor/autoload.php';
 
 //  Load `.env` configuration file and keys but not $_SERVER
 $previousKeys = array_keys($_ENV);
@@ -16,17 +16,18 @@ array_map(function($key) {
 //  Set timezone
 @ date_default_timezone_set(env('TIMEZONE', 'UTC'));
 
-//  Create app
-$app = new \Slim\App(
-    [
-        'settings' => [
-            'displayErrorDetails' => env('APP_DEBUG', true)
+if ('cli-server' == SAPI_TYPE) {
+    //  Create app
+    $app = new \Slim\App(
+        [
+            'settings' => [
+                'displayErrorDetails' => env('APP_DEBUG', true)
+            ]
         ]
-    ]
-);
-
+    );
 //  Get container
-$container = $app->getContainer();
+    $container = $app->getContainer();
 
-//  Require api route file
-require '../route/api.php';
+    //  Require api route file
+    require dirname(__FILE__) . '/../route/api.php';
+}
