@@ -19,7 +19,9 @@ class Mail
         $mailer = new SmtpMailer([
             'host' => env('MAIL_HOST'),
             'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD')
+            'password' => env('MAIL_PASSWORD'),
+            'port' => 465,
+            'secure' => 'ssl'
         ]);
         $mailer->send($mail);
     }
